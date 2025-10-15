@@ -1,0 +1,588 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    background-color: #080808;
+    color: #f6f6f6;
+    overflow-x: hidden;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* App Container */
+.app-container {
+    width: 440px;
+    height: 100vh;
+    max-height: 896px;
+    background-color: #080808;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+/* Main Content */
+.main-content {
+    flex: 1;
+    padding: 84px 20px 0;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+/* Header Section */
+.header-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.greeting {
+    font-family: 'Instrument Serif', serif;
+    font-style: italic;
+    font-size: 48px;
+    font-weight: 400;
+    color: #f6f6f6;
+    line-height: normal;
+}
+
+.add-button {
+    background-color: #ff5900;
+    border: none;
+    border-radius: 64px;
+    width: 52px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.add-button:hover {
+    background-color: #e64a00;
+    transform: scale(1.05);
+}
+
+.add-button:active {
+    transform: scale(0.95);
+}
+
+.add-icon {
+    width: 24px;
+    height: 24px;
+    color: #f6f6f6;
+}
+
+/* Lecture Cards Container */
+.lecture-cards-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+}
+
+/* Lecture Card */
+.lecture-card {
+    background-color: #1e1e1e;
+    border-radius: 20px;
+    padding: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.lecture-card:hover {
+    background-color: #2a2a2a;
+    transform: translateY(-2px);
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.subject-name {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: 28px;
+    font-weight: 400;
+    color: #f6f6f6;
+    line-height: normal;
+}
+
+.attendance-percentage {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: 28px;
+    font-weight: 400;
+    color: #f6f6f6;
+    line-height: normal;
+}
+
+.card-stats {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.stat-item {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.stat-number {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #f6f6f6;
+    line-height: normal;
+}
+
+.stat-label {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #f6f6f6;
+    line-height: normal;
+}
+
+/* Bottom Navigation */
+.bottom-navigation {
+    position: absolute;
+    bottom: 40px;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background-color: #080808;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+}
+
+.nav-item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    padding: 6px 0;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.nav-item:hover {
+    transform: translateY(-2px);
+}
+
+.nav-icon-container {
+    width: 56px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 16px;
+    transition: all 0.2s ease;
+}
+
+.nav-item.active .nav-icon-container {
+    background-color: #ff5900;
+}
+
+.nav-icon {
+    width: 24px;
+    height: 24px;
+    color: #f6f6f6;
+}
+
+.nav-label {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    color: #f6f6f6;
+    line-height: 16px;
+    letter-spacing: 0.5px;
+    text-align: center;
+    min-width: 100%;
+}
+
+/* Gesture Bar */
+.gesture-bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 24px;
+    background-color: #080808;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gesture-handle {
+    width: 108px;
+    height: 4px;
+    background-color: #f6f6f6;
+    border-radius: 12px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    .app-container {
+        width: 100vw;
+        height: 100vh;
+    }
+    
+    .main-content {
+        padding: 60px 16px 0;
+    }
+    
+    .greeting {
+        font-size: 40px;
+    }
+    
+    .lecture-card {
+        padding: 16px;
+    }
+    
+    .subject-name,
+    .attendance-percentage {
+        font-size: 24px;
+    }
+    
+    .stat-number,
+    .stat-label {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 360px) {
+    .greeting {
+        font-size: 36px;
+    }
+    
+    .add-button {
+        width: 48px;
+        height: 48px;
+    }
+    
+    .add-icon {
+        width: 20px;
+        height: 20px;
+    }
+    
+    .subject-name,
+    .attendance-percentage {
+        font-size: 22px;
+    }
+}
+
+/* Scrollbar Styling */
+.main-content::-webkit-scrollbar {
+    width: 4px;
+}
+
+.main-content::-webkit-scrollbar-track {
+    background: #080808;
+}
+
+.main-content::-webkit-scrollbar-thumb {
+    background: #1e1e1e;
+    border-radius: 2px;
+}
+
+.main-content::-webkit-scrollbar-thumb:hover {
+    background: #2a2a2a;
+}
+
+/* Animation for card loading */
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.lecture-card {
+    animation: slideInUp 0.3s ease-out;
+}
+
+.lecture-card:nth-child(1) { animation-delay: 0.1s; }
+.lecture-card:nth-child(2) { animation-delay: 0.2s; }
+.lecture-card:nth-child(3) { animation-delay: 0.3s; }
+.lecture-card:nth-child(4) { animation-delay: 0.4s; }
+.lecture-card:nth-child(5) { animation-delay: 0.5s; }
+.lecture-card:nth-child(6) { animation-delay: 0.6s; }
+
+/* Focus states for accessibility */
+.add-button:focus,
+.nav-item:focus,
+.lecture-card:focus {
+    outline: 2px solid #ff5900;
+    outline-offset: 2px;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    .lecture-card {
+        border: 1px solid #f6f6f6;
+    }
+    
+    .nav-item.active .nav-icon-container {
+        border: 2px solid #f6f6f6;
+    }
+}
+
+/* Modal Styles */
+.lecture-modal,
+.add-lecture-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    animation: fadeIn 0.3s ease;
+}
+
+.modal-content {
+    background-color: #1e1e1e;
+    border-radius: 20px;
+    padding: 24px;
+    width: 90%;
+    max-width: 400px;
+    max-height: 80vh;
+    overflow-y: auto;
+    animation: slideInUp 0.3s ease;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #2a2a2a;
+}
+
+.modal-header h2 {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    color: #f6f6f6;
+}
+
+.close-modal {
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #f6f6f6;
+    cursor: pointer;
+    padding: 4px;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+}
+
+.close-modal:hover {
+    background-color: #2a2a2a;
+}
+
+.modal-body {
+    color: #f6f6f6;
+}
+
+.detail-section {
+    margin-bottom: 20px;
+}
+
+.detail-section h3 {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    color: #f6f6f6;
+    margin-bottom: 8px;
+}
+
+.detail-section p {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: 14px;
+    color: #cccccc;
+    margin-bottom: 4px;
+}
+
+/* Form Styles */
+.add-lecture-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: #f6f6f6;
+}
+
+.form-group input {
+    background-color: #2a2a2a;
+    border: 1px solid #3a3a3a;
+    border-radius: 8px;
+    padding: 12px;
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: 16px;
+    color: #f6f6f6;
+    transition: border-color 0.2s ease;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #ff5900;
+}
+
+.submit-btn {
+    background-color: #ff5900;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 24px;
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #f6f6f6;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    margin-top: 8px;
+}
+
+.submit-btn:hover {
+    background-color: #e64a00;
+}
+
+/* View Styles */
+.documents-view,
+.calendar-view {
+    display: none;
+    width: 100%;
+}
+
+.view-header {
+    margin-bottom: 24px;
+}
+
+.view-header h2 {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+    color: #f6f6f6;
+}
+
+.documents-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.document-item {
+    background-color: #1e1e1e;
+    border-radius: 12px;
+    padding: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.document-item:hover {
+    background-color: #2a2a2a;
+}
+
+.document-item h3 {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    color: #f6f6f6;
+    margin-bottom: 4px;
+}
+
+.document-item p {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: 14px;
+    color: #cccccc;
+}
+
+.calendar-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.calendar-day {
+    background-color: #1e1e1e;
+    border-radius: 12px;
+    padding: 16px;
+}
+
+.calendar-day h3 {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    color: #f6f6f6;
+    margin-bottom: 8px;
+}
+
+.calendar-day p {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: 14px;
+    color: #cccccc;
+    margin-bottom: 4px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}

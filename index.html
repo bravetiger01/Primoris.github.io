@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lecture Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;500&family=Instrument+Serif:ital@1&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Header Section -->
+            <div class="header-section">
+                <h1 class="greeting">Good Morning</h1>
+                <button class="add-button">
+                    <svg class="add-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 5V19M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Lecture Cards Section -->
+            <div class="lecture-cards-container">
+                <!-- DS Card -->
+                <div class="lecture-card">
+                    <div class="card-header">
+                        <h3 class="subject-name">DS</h3>
+                        <span class="attendance-percentage">75%</span>
+                    </div>
+                    <div class="card-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">12</span>
+                            <span class="stat-label">Lectures Attended</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">16</span>
+                            <span class="stat-label">Done</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PS Card -->
+                <div class="lecture-card">
+                    <div class="card-header">
+                        <h3 class="subject-name">PS</h3>
+                        <span class="attendance-percentage">75%</span>
+                    </div>
+                    <div class="card-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">12</span>
+                            <span class="stat-label">Lectures Attended</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">16</span>
+                            <span class="stat-label">Done</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PCE Card -->
+                <div class="lecture-card">
+                    <div class="card-header">
+                        <h3 class="subject-name">PCE</h3>
+                        <span class="attendance-percentage">75%</span>
+                    </div>
+                    <div class="card-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">12</span>
+                            <span class="stat-label">Lectures Attended</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">16</span>
+                            <span class="stat-label">Done</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- DBMS Card -->
+                <div class="lecture-card">
+                    <div class="card-header">
+                        <h3 class="subject-name">DBMS</h3>
+                        <span class="attendance-percentage">75%</span>
+                    </div>
+                    <div class="card-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">12</span>
+                            <span class="stat-label">Lectures Attended</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">16</span>
+                            <span class="stat-label">Done</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- IC Card -->
+                <div class="lecture-card">
+                    <div class="card-header">
+                        <h3 class="subject-name">IC</h3>
+                        <span class="attendance-percentage">75%</span>
+                    </div>
+                    <div class="card-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">12</span>
+                            <span class="stat-label">Lectures Attended</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">16</span>
+                            <span class="stat-label">Done</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- DF Card -->
+                <div class="lecture-card">
+                    <div class="card-header">
+                        <h3 class="subject-name">DF</h3>
+                        <span class="attendance-percentage">75%</span>
+                    </div>
+                    <div class="card-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">12</span>
+                            <span class="stat-label">Lectures Attended</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">16</span>
+                            <span class="stat-label">Done</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Navigation -->
+        <div class="bottom-navigation">
+            <div class="nav-item active">
+                <div class="nav-icon-container">
+                    <svg class="nav-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 9L12 2L21 9V20C21 20.5304 20.7893 21.0391 20.4142 21.4142C20.0391 21.7893 19.5304 22 19 22H5C4.46957 22 3.96086 21.7893 3.58579 21.4142C3.21071 21.0391 3 20.5304 3 20V9Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <polyline points="9,22 9,12 15,12 15,22" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <span class="nav-label">Label</span>
+            </div>
+            <div class="nav-item">
+                <div class="nav-icon-container">
+                    <svg class="nav-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9 11H15M9 15H15M17 21H7C5.89543 21 5 20.1046 5 19V5C5 3.89543 5.89543 3 7 3H12.5858C12.851 3 13.1054 3.10536 13.2929 3.29289L19.7071 9.70711C19.8946 9.89464 20 10.149 20 10.4142V19C20 20.1046 19.1046 21 18 21H17Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <span class="nav-label">Label</span>
+            </div>
+            <div class="nav-item">
+                <div class="nav-icon-container">
+                    <svg class="nav-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16 4H18C18.5304 4 19.0391 4.21071 19.4142 4.58579C19.7893 4.96086 20 5.46957 20 6V18C20 18.5304 19.7893 19.0391 19.4142 19.4142C19.0391 19.7893 18.5304 20 18 20H6C5.46957 20 4.96086 19.7893 4.58579 19.4142C4.21071 19.0391 4 18.5304 4 18V6C4 5.46957 4.21071 4.96086 4.58579 4.58579C4.96086 4.21071 5.46957 4 6 4H8M16 4C16 3.46957 15.7893 2.96086 15.4142 2.58579C15.0391 2.21071 14.5304 2 14 2H10C9.46957 2 8.96086 2.21071 8.58579 2.58579C8.21071 2.96086 8 3.46957 8 4M16 4C16 4.53043 15.7893 5.03914 15.4142 5.41421C15.0391 5.78929 14.5304 6 14 6H10C9.46957 6 8.96086 5.78929 8.58579 5.41421C8.21071 5.03914 8 4.53043 8 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <span class="nav-label">Label</span>
+            </div>
+        </div>
+
+        <!-- Gesture Bar -->
+        <div class="gesture-bar">
+            <div class="gesture-handle"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
